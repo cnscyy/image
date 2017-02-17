@@ -1,0 +1,1311 @@
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f6ed8a63bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4028 KB/s (3939473 bytes in 0.954s)
+
+DEBUG:root:4028 KB/s (3939473 bytes in 0.954s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f6ed8a63ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f6ed8a63b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f6ed8a63bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f6ed8a63e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1416563255 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1416563255 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7ff293faebd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3779 KB/s (3939473 bytes in 1.018s)
+
+DEBUG:root:3779 KB/s (3939473 bytes in 1.018s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <JavascriptInterfaceFilter.JavascriptInterfaceTrigger.JavascriptTrigger object at 0x7ff293faead0>
+DEBUG:root:Reporter: <JavascriptInterfaceFilter.JavascriptInterfaceReporter.JavascriptInterfaceAnalyzer object at 0x7ff293faeb10>
+DEBUG:root:Analyzer: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7ff293faebd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7ff293faee10>
+DEBUG:root:Lanzando FuzzingTrigger
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 3126750377 50
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 3126750377 50
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7fda2f94bbd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4078 KB/s (3939473 bytes in 0.943s)
+
+DEBUG:root:4078 KB/s (3939473 bytes in 0.943s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7fda2f94bad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7fda2f94bb10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7fda2f94bbd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fda2f94be10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1977202444 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1977202444 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f0cf121fbd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4006 KB/s (3939473 bytes in 0.960s)
+
+DEBUG:root:4006 KB/s (3939473 bytes in 0.960s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f0cf121fad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f0cf121fb10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f0cf121fbd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f0cf121fe10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 992446204 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 992446204 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f7abbf29bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4111 KB/s (3939473 bytes in 0.935s)
+
+DEBUG:root:4111 KB/s (3939473 bytes in 0.935s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f7abbf29ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f7abbf29b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f7abbf29bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f7abbf29e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 2243178609 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 2243178609 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7fc4e05c8bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3949 KB/s (3939473 bytes in 0.974s)
+
+DEBUG:root:3949 KB/s (3939473 bytes in 0.974s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <JavascriptInterfaceFilter.JavascriptInterfaceTrigger.JavascriptTrigger object at 0x7fc4e05c8ad0>
+DEBUG:root:Reporter: <JavascriptInterfaceFilter.JavascriptInterfaceReporter.JavascriptInterfaceAnalyzer object at 0x7fc4e05c8b10>
+DEBUG:root:Analyzer: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7fc4e05c8bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fc4e05c8e10>
+DEBUG:root:Lanzando FuzzingTrigger
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 1438881398 50
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 1438881398 50
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7fe03c3c7bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4116 KB/s (3939473 bytes in 0.934s)
+
+DEBUG:root:4116 KB/s (3939473 bytes in 0.934s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7fe03c3c7ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7fe03c3c7b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7fe03c3c7bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fe03c3c7dd0>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 2519129804 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 2519129804 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7fb7ab1aabd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4020 KB/s (3939473 bytes in 0.956s)
+
+DEBUG:root:4020 KB/s (3939473 bytes in 0.956s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7fb7ab1aaad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7fb7ab1aab10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7fb7ab1aabd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fb7ab1aae10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3402099355 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3402099355 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f10af498bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4046 KB/s (3939473 bytes in 0.950s)
+
+DEBUG:root:4046 KB/s (3939473 bytes in 0.950s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f10af498ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f10af498b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f10af498bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f10af498e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 4245346438 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 4245346438 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f37b9d9abd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3994 KB/s (3939473 bytes in 0.963s)
+
+DEBUG:root:3994 KB/s (3939473 bytes in 0.963s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f37b9d9aad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f37b9d9ab10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f37b9d9abd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f37b9d9add0>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1792318515 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1792318515 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f7123274bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4062 KB/s (3939473 bytes in 0.946s)
+
+DEBUG:root:4062 KB/s (3939473 bytes in 0.946s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f7123274ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f7123274b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f7123274bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f7123274e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1565891939 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1565891939 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f3bec4fdbd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3853 KB/s (3939473 bytes in 0.998s)
+
+DEBUG:root:3853 KB/s (3939473 bytes in 0.998s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f3bec4fdad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f3bec4fdb10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f3bec4fdbd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f3bec4fde10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 246953875 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 246953875 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f74802e2bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3977 KB/s (3939473 bytes in 0.967s)
+
+DEBUG:root:3977 KB/s (3939473 bytes in 0.967s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f74802e2ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f74802e2b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f74802e2bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f74802e2e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 533489450 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 533489450 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7f514644ebd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3891 KB/s (3939473 bytes in 0.988s)
+
+DEBUG:root:3891 KB/s (3939473 bytes in 0.988s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <PhonegapFilter.PhonegapTriggerJSInjection.PhonegapTrigger object at 0x7f514644ead0>
+DEBUG:root:Reporter: <PhonegapFilter.PhonegapReporter.PhonegapReporter object at 0x7f514644eb10>
+DEBUG:root:Analyzer: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7f514644ebd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f514644ee10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 3897642090 100
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 3897642090 100
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7fbcb9c67bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3982 KB/s (3939473 bytes in 0.966s)
+
+DEBUG:root:3982 KB/s (3939473 bytes in 0.966s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7fbcb9c67ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7fbcb9c67b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7fbcb9c67bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fbcb9c67e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 176713434 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 176713434 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f6e407d9bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4090 KB/s (3939473 bytes in 0.940s)
+
+DEBUG:root:4090 KB/s (3939473 bytes in 0.940s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f6e407d9ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f6e407d9b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f6e407d9bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f6e407d9dd0>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3535321749 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3535321749 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7f7dd8c1dbd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3856 KB/s (3939473 bytes in 0.997s)
+
+DEBUG:root:3856 KB/s (3939473 bytes in 0.997s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <PhonegapFilter.PhonegapTriggerJSInjection.PhonegapTrigger object at 0x7f7dd8c1dad0>
+DEBUG:root:Reporter: <PhonegapFilter.PhonegapReporter.PhonegapReporter object at 0x7f7dd8c1db10>
+DEBUG:root:Analyzer: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7f7dd8c1dbd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f7dd8c1de10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 2301066524 100
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 2301066524 100
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f837ca76bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4066 KB/s (3939473 bytes in 0.945s)
+
+DEBUG:root:4066 KB/s (3939473 bytes in 0.945s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f837ca76ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f837ca76b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f837ca76bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f837ca76e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1491160797 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1491160797 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f8bdddc2bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3987 KB/s (3939473 bytes in 0.964s)
+
+DEBUG:root:3987 KB/s (3939473 bytes in 0.964s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f8bdddc2ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f8bdddc2b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f8bdddc2bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f8bdddc2e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3206582526 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3206582526 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7f2f6f849bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4031 KB/s (3939473 bytes in 0.954s)
+
+DEBUG:root:4031 KB/s (3939473 bytes in 0.954s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <JavascriptInterfaceFilter.JavascriptInterfaceTrigger.JavascriptTrigger object at 0x7f2f6f849ad0>
+DEBUG:root:Reporter: <JavascriptInterfaceFilter.JavascriptInterfaceReporter.JavascriptInterfaceAnalyzer object at 0x7f2f6f849b10>
+DEBUG:root:Analyzer: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7f2f6f849bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f2f6f849e10>
+DEBUG:root:Lanzando FuzzingTrigger
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 3680733444 50
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 3680733444 50
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7fc5f44c4bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4009 KB/s (3939473 bytes in 0.959s)
+
+DEBUG:root:4009 KB/s (3939473 bytes in 0.959s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7fc5f44c4ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7fc5f44c4b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7fc5f44c4bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fc5f44c4e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1123243370 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 1123243370 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7fe0744dbbd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3988 KB/s (3939473 bytes in 0.964s)
+
+DEBUG:root:3988 KB/s (3939473 bytes in 0.964s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <PhonegapFilter.PhonegapTriggerJSInjection.PhonegapTrigger object at 0x7fe0744dbad0>
+DEBUG:root:Reporter: <PhonegapFilter.PhonegapReporter.PhonegapReporter object at 0x7fe0744dbb10>
+DEBUG:root:Analyzer: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7fe0744dbbd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fe0744dbe10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 510413451 100
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 510413451 100
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f539a818bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4027 KB/s (3939473 bytes in 0.955s)
+
+DEBUG:root:4027 KB/s (3939473 bytes in 0.955s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f539a818ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f539a818b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f539a818bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f539a818e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3318680338 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3318680338 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7f3f0c4debd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3975 KB/s (3939473 bytes in 0.967s)
+
+DEBUG:root:3975 KB/s (3939473 bytes in 0.967s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <PhonegapFilter.PhonegapTriggerJSInjection.PhonegapTrigger object at 0x7f3f0c4dead0>
+DEBUG:root:Reporter: <PhonegapFilter.PhonegapReporter.PhonegapReporter object at 0x7f3f0c4deb10>
+DEBUG:root:Analyzer: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7f3f0c4debd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f3f0c4dee10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 2341098997 100
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 2341098997 100
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f9725075bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4068 KB/s (3939473 bytes in 0.945s)
+
+DEBUG:root:4068 KB/s (3939473 bytes in 0.945s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f9725075ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f9725075b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f9725075bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f9725075dd0>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3374813595 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3374813595 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7fcc9a16dbd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3963 KB/s (3939473 bytes in 0.970s)
+
+DEBUG:root:3963 KB/s (3939473 bytes in 0.970s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <JavascriptInterfaceFilter.JavascriptInterfaceTrigger.JavascriptTrigger object at 0x7fcc9a16dad0>
+DEBUG:root:Reporter: <JavascriptInterfaceFilter.JavascriptInterfaceReporter.JavascriptInterfaceAnalyzer object at 0x7fcc9a16db10>
+DEBUG:root:Analyzer: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7fcc9a16dbd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fcc9a16de10>
+DEBUG:root:Lanzando FuzzingTrigger
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 1775356082 50
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 1775356082 50
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7fc97d47ebd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4056 KB/s (3939473 bytes in 0.948s)
+
+DEBUG:root:4056 KB/s (3939473 bytes in 0.948s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <JavascriptInterfaceFilter.JavascriptInterfaceTrigger.JavascriptTrigger object at 0x7fc97d47ead0>
+DEBUG:root:Reporter: <JavascriptInterfaceFilter.JavascriptInterfaceReporter.JavascriptInterfaceAnalyzer object at 0x7fc97d47eb10>
+DEBUG:root:Analyzer: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7fc97d47ebd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fc97d47ee10>
+DEBUG:root:Lanzando FuzzingTrigger
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 1712418400 50
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 1712418400 50
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7efcfc683bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3799 KB/s (3939473 bytes in 1.012s)
+
+DEBUG:root:3799 KB/s (3939473 bytes in 1.012s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7efcfc683ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7efcfc683b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7efcfc683bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7efcfc683e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 87187757 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 87187757 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7fda2cd76bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4350 KB/s (3939473 bytes in 0.884s)
+
+DEBUG:root:4350 KB/s (3939473 bytes in 0.884s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <JavascriptInterfaceFilter.JavascriptInterfaceTrigger.JavascriptTrigger object at 0x7fda2cd76ad0>
+DEBUG:root:Reporter: <JavascriptInterfaceFilter.JavascriptInterfaceReporter.JavascriptInterfaceAnalyzer object at 0x7fda2cd76b10>
+DEBUG:root:Analyzer: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7fda2cd76bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fda2cd76e10>
+DEBUG:root:Lanzando FuzzingTrigger
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 2914113252 50
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 2914113252 50
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7fc88e66dbd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3942 KB/s (3939473 bytes in 0.975s)
+
+DEBUG:root:3942 KB/s (3939473 bytes in 0.975s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <PhonegapFilter.PhonegapTriggerJSInjection.PhonegapTrigger object at 0x7fc88e66dad0>
+DEBUG:root:Reporter: <PhonegapFilter.PhonegapReporter.PhonegapReporter object at 0x7fc88e66db10>
+DEBUG:root:Analyzer: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7fc88e66dbd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7fc88e66de10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 505357939 100
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 505357939 100
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7f89dcabfbd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3999 KB/s (3939473 bytes in 0.961s)
+
+DEBUG:root:3999 KB/s (3939473 bytes in 0.961s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <PhonegapFilter.PhonegapTriggerJSInjection.PhonegapTrigger object at 0x7f89dcabfad0>
+DEBUG:root:Reporter: <PhonegapFilter.PhonegapReporter.PhonegapReporter object at 0x7f89dcabfb10>
+DEBUG:root:Analyzer: <PhonegapFilter.PhonegapAnalyzerJSInjection.PhonegapAnalyzer object at 0x7f89dcabfbd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f89dcabfe10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 1503591291 100
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 1503591291 100
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'SSLFilter.SSLAnalyzer.SSLAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f86987e9bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.102:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:4053 KB/s (3939473 bytes in 0.949s)
+
+DEBUG:root:4053 KB/s (3939473 bytes in 0.949s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <SSLFilter.SSLTrigger.SSLTrigger object at 0x7f86987e9ad0>
+DEBUG:root:Reporter: <SSLFilter.SSLReporter.SSLReporter object at 0x7f86987e9b10>
+DEBUG:root:Analyzer: <SSLFilter.SSLAnalyzer.SSLAnalyzer object at 0x7f86987e9bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f86987e9e10>
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3132684922 200
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 1000 -s 3132684922 200
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.102:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.102"}
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
+DEBUG:root:Analyzer class: <class 'JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer'>
+DEBUG:root:Init analyzer
+DEBUG:root:Analyzer acting component: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7f823a9f8bd0>
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:Running blocking command: adb root
+DEBUG:root:waiting to connect to adb as root
+DEBUG:root:Running blocking command: adb connect 192.168.137.103:5556:5556
+DEBUG:root:connected to adb as root
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 install -r ar.gob.buenosaires.reclamos.apk
+ERROR:root:	pkg: /data/local/tmp/ar.gob.buenosaires.reclamos.apk
+Success
+
+ERROR:root:3941 KB/s (3939473 bytes in 0.976s)
+
+DEBUG:root:3941 KB/s (3939473 bytes in 0.976s)
+
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell "busybox route add -host 192.168.137.111 dev eth0; busybox route delete default; route add default gw 192.168.137.111 dev eth0"
+DEBUG:root:Setting localhost as gateway: ('route: SIOCADDRT: File exists\r\n', '')
+DEBUG:root:Init successful
+DEBUG:root:Trigger: <JavascriptInterfaceFilter.JavascriptInterfaceTrigger.JavascriptTrigger object at 0x7f823a9f8ad0>
+DEBUG:root:Reporter: <JavascriptInterfaceFilter.JavascriptInterfaceReporter.JavascriptInterfaceAnalyzer object at 0x7f823a9f8b10>
+DEBUG:root:Analyzer: <JavascriptInterfaceFilter.JavascriptInterfaceAnalyzer.JavascriptInterfaceAnalyzer object at 0x7f823a9f8bd0>
+DEBUG:root:Emulator: <Emulator.Emulator object at 0x7f823a9f8e10>
+DEBUG:root:Lanzando FuzzingTrigger
+DEBUG:root:Lanzando shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 1025539622 50
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 shell monkey -p ar.gob.buenosaires.reclamos -v --throttle 4000 -s 1025539622 50
+DEBUG:root:Notifying 127.0.0.1:8081/trigger
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/trigger, data: {}
+WARNING:root:{'trigger': {}}
+DEBUG:root:already closed trigger
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /data/data/ar.gob.buenosaires.reclamos ar.gob.buenosaires.reclamos_files/internal_storage/
+DEBUG:root:Running blocking command: adb -s 192.168.137.103:5556 pull /sdcard/ ar.gob.buenosaires.reclamos_files/sdcard_modified_files/
+DEBUG:root:Notifying 127.0.0.1:8081/analyzer
+DEBUG:root:Trigger: notify http://127.0.0.1:8081/analyzer, data: {}
+WARNING:root:{'trigger': {}, 'analyzer': {}}
+DEBUG:root:Notifying 127.0.0.1:8082/report
+DEBUG:root:Trigger: notify http://127.0.0.1:8082/report, data: {"status": "UNKNOWN", "description": {}, "emulator": "192.168.137.103"}
+ERROR:root:Traceback (most recent call last):
+  File "/home/yy/Marvin-dynamic-Analyzer-20170217/client/Utils.py", line 45, in notify
+    return urllib2.urlopen(request).read()
+  File "/usr/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/usr/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/usr/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 111] Connection refused>
+
+DEBUG:root:already closed analyzer
+DEBUG:root:already closed reporter
+DEBUG:root:Running blocking command: adb disconnect
